@@ -1,0 +1,23 @@
+<form  [formGroup]="homeForm" class="home-search" (ngSubmit)="onSubimit()" >
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="the big bang theory " formControlName="serie" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Temporada</mat-label>
+        <input matInput type="number" placeholder="1" value="1" formControlName="temporada" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Episódio</mat-label>
+        <input matInput type="number" placeholder="1" value="1" formControlName="episodio" required>
+    </mat-form-field>
+    <div>
+        <button type="submit"  mat-raised-button color="primary">Pesquisar</button>
+    </div>
+</form>
+<div>
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <p *ngIf="erro">Série não encontrada</p>
+</div>
