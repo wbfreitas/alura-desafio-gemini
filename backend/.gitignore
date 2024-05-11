@@ -1,0 +1,32 @@
+# Arquivos de configuração
+.DS_Store
+.env
+.srt
+
+# Dependências
+node_modules/
+
+# Logs e saída
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de compilação
+/dist
+
+# Arquivos de build
+/build
+
+# Arquivos de cache
+/.pnp
+.pnp.js
+
+# Editor specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

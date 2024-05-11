@@ -2,7 +2,7 @@
 
 Se você é como eu, que adora assistir séries para treinar e aumentar seu conhecimento de inglês, mas se perde com as palavras que não conhece, essa é a solução perfeita para você! 
 
-**[Vídeo demonstrativo do sistema em ação!](link-do-vídeo)**
+**[Vídeo demonstrativo do sistema em ação!](https://youtu.be/QqVcI0yl3o0)**
 
 
 Este projeto inovador em Angular e Node.js te ajuda a desvendar os mistérios do inglês falado em suas séries favoritas. Ele baixa as legendas (arquivos .srt) e utiliza o poder da IA da API do Google Gemini para te oferecer diversas ferramentas de aprendizado:
@@ -45,11 +45,11 @@ Para bricar é necessário rodar locar o frontend e o backend que estão em past
 5. **Inicialize as Aplicações:**
     * **Backend:**
         ```bash
-        npm start
+        TOKEN=<API-KEY Gemini> node index.mjs
         ```
     * **Frontend:**
         ```bash
-        ng serve
+        npm start 
         ```
 6. **Acesse a Aplicação:**
     * Abra seu navegador e acesse `http://localhost:4200/` (ou a porta definida no Angular CLI).
