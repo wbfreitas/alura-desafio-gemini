@@ -19,6 +19,12 @@ Este projeto inovador em Angular e Node.js te ajuda a desvendar os mistérios do
     * Teste seus conhecimentos com quizzes de múltipla escolha elaborados pela inteligência do Gemini.
     * Revise o vocabulário aprendido e fixe o conteúdo.
 
+## Gostaria de destaques o [Código](https://github.com/wbfreitas/alura-desafio-gemini/blob/develop/backend/prompts.mjs):
+
+Nele estão os prompts usadados para fazer os agrupamentos, as traduções de inglês para protuguês e criar as questões. Nele usei os padrões: 
+Few-shot prompting: Permite que o IA aprenda com poucos exemplos.
+Chain of thought: Auxilia o IA no raciocínio e na tomada de decisões.
+
 ## Como Rodar a Aplicação:
 Para bricar é necessário rodar locar o frontend e o backend que estão em pastas separadas.  
 1. **Requisitos:**
@@ -75,3 +81,4 @@ Aqui estão alguns exemplos de séries, temporadas e episódios que você pode u
 * **Filtros de Pesquisa Avançada:**
     * Filtre séries por gênero, idioma original, popularidade e mais.
     * Encontre séries que se encaixam perfeitamente no seu gosto.
+
