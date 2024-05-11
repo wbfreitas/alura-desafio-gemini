@@ -1,0 +1,39 @@
+.result-card {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    mat-icon {
+        cursor: pointer;
+    }
+
+}
+
+.result-card.perguntas {
+    flex-direction: column;
+}
+
+.result-card.perguntas li {
+    height: 34px;
+    background: #b0b0b0;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    &.certa {
+        background-color: #00800063;
+    }
+    &.errada {
+        background-color: #ff00005e;
+    }
+}
+
+.result-card.perguntas ul {
+    list-style-type: none;
+}
+
+.mat-expansion-panel-header-title  {
+    mat-icon {
+        margin-right: 18px; 
+    }
+}

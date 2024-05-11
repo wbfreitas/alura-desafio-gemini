@@ -1,0 +1,52 @@
+<ng-container *ngIf="result.length">
+    <mat-accordion >
+        <mat-expansion-panel [disabled]="loading" *ngFor="let agrupador of result" (opened)="opened(agrupador)">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{agrupador.nome}}
+                </mat-panel-title>
+                <mat-panel-description *ngIf="agrupador.nome == 'tradução completa'">
+                    <p >Demora um pouquinho</p>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div class="result-card" *ngIf="agrupador.nome != 'perguntas'">
+                <mat-icon *ngIf="!loading" (click)="update(agrupador)" aria-hidden="false" aria-label="Example home icon" fontIcon="restart_alt"></mat-icon>
+                <mat-card *ngIf="agrupador.valor">
+                    <mat-card-header>
+                        <mat-card-title>Inglês</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p  *ngFor="let ingles of agrupador.valor?.ingles">
+                            {{ingles}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card *ngIf="agrupador.valor">
+                    <mat-card-header>
+                        <mat-card-title>Português</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p *ngFor="let portugues of agrupador.valor?.portugues">
+                            {{portugues}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div class="result-card perguntas" *ngIf="agrupador.nome == 'perguntas'">
+                <mat-icon *ngIf="!loading" (click)="update(agrupador)" aria-hidden="false" aria-label="Example home icon" fontIcon="restart_alt"></mat-icon>
+                <ng-container *ngFor="let pergunta of agrupador?.valor; let i = index">
+                        <h2>{{i+1}}- {{pergunta.question}}</h2>
+                        <ul>
+                            <li [ngClass]="{'certa': questaoSelecionada == i && opicao == pergunta.answer}" 
+                                [ngClass]="{'errada': questaoSelecionada == i && opicao != pergunta.answer}"
+                            *ngFor="let opicao of pergunta.options; let i index" (click)="selecionaQuestao(i)">
+                                {{opicao}}
+                            </li>
+                        </ul>
+                </ng-container>
+            </div>
+            <mat-spinner *ngIf="loading">Esperando o gemini processar</mat-spinner>
+        </mat-expansion-panel>
+    </mat-accordion>
+</ng-container>
