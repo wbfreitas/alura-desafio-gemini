@@ -4,6 +4,10 @@ Se você é como eu, que adora assistir séries para treinar e aumentar seu conh
 
 **[Vídeo demonstrativo do sistema em ação!](https://youtu.be/QqVcI0yl3o0)**
 
+<p align="center">
+  <img width="460" height="300" src="alura-desafio.gif">
+</p>
+
 
 Este projeto inovador em Angular e Node.js te ajuda a desvendar os mistérios do inglês falado em suas séries favoritas. Ele baixa as legendas (arquivos .srt) e utiliza o poder da IA da API do Google Gemini para te oferecer diversas ferramentas de aprendizado:
 
